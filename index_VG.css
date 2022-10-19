@@ -396,3 +396,38 @@ display: block;
     top: 0;
 
 }
+
+/* media */
+
+@media (max-width: 900px) {
+    .album_data > div > h1 {
+        font-size: 37.7833px;
+}
+
+    .album_data > div > h2 {
+        font-size: 16.2px;
+
+}
+
+    header > h1:first-child {
+        font-size: 54px;
+}
+}
+
+
+@media (min-width: 1111px) {
+.album_data > div > h1 {
+        font-size: 46.65px;
+}
+
+.album_data > div > h2 {
+    font-size: 19.9833px;
+
+}
+
+header > h1:first-child {
+    font-size: 66.65px;
+}
+
+
+}
