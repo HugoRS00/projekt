@@ -1,9 +1,9 @@
-:root{
-    --large:(6vw);
-    --medium:(4);
+:root {
+    --large: (6vw);
+    --medium: (4);
     --small: (2);
 
-    
+
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 
 /* opacity background */
 
-body > div {
+body>div {
     background-color: rgba(0, 0, 0, 0.3);
     margin: 100px 50px;
     border-radius: 20px;
@@ -26,23 +26,24 @@ body > div {
 
 /* header */
 
-header > h1:first-child {
-    font-family: 'Monofett', cursive; 
+header>h1:first-child {
+    font-family: 'Monofett', cursive;
     font-size: calc(1 * var(--large));
+    margin-top: 5px;
 }
 
 /* navigation */
 
-nav{
+nav {
     padding: 10px;
     display: flex;
     margin: 50px 0px;
     gap: 5px;
 }
 
-nav > div {
+nav>div {
     display: inline;
-    padding: 20px 50px;
+    padding: 20px 0;
     background-color: rgba(255, 255, 255, 0.6);
     color: black;
     border-radius: 10px;
@@ -51,14 +52,14 @@ nav > div {
     font-size: 22px;
 }
 
-nav > :nth-child(2) {
+nav> :nth-child(2) {
     font-weight: bold;
     border: 2px solid white;
     box-shadow: white;
 }
 
 main {
- margin: 0;
+    margin: 0;
 }
 
 /* two sections */
@@ -68,58 +69,58 @@ article.best {
     padding: 20px 20px;
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.5);
-;
+    ;
     margin-bottom: 20px;
 }
 
 /* Album */
 
-.album_data{
+.album_data {
     grid-area: album;
 }
 
-.album_data > div > h1 {
-    font-family: 'Monofett', cursive; 
+.album_data>div>h1 {
+    font-family: 'Monofett', cursive;
     font-size: calc(0.7 * var(--large));
     margin: 0;
     padding: 0;
 }
 
-.album_data > div > h2 {
+.album_data>div>h2 {
     font-size: calc(0.3 * var(--large));
 
 }
 
-.album_data div:nth-child(2){
+.album_data div:nth-child(2) {
     margin-top: 60px;
 }
 
-.album_data :nth-child(2) > p{
+.album_data :nth-child(2)>p {
     margin: 0;
     padding: 0;
     color: rgba(255, 255, 255, 0.9);
 
 }
 
-.album_data :nth-child(2) > ul{
+.album_data :nth-child(2)>ul {
     margin: 0 20px;
     padding: 0 auto;
     color: rgba(255, 255, 255, 0.9);
 }
 
-.album_data > ul {
+.album_data>ul {
     list-style: none;
-    
-    
+
+
 }
 
-.album_data > ul > li {
+.album_data>ul>li {
     list-style: none;
     font-size: calc(0.2 * var(--large));
-    
+
 }
 
-.album_data > :nth-child(2) > ul {
+.album_data> :nth-child(2)>ul {
     list-style: none;
 }
 
@@ -149,9 +150,10 @@ article.best {
     justify-content: center;
     align-items: center;
     margin-bottom: 5px;
+    gap: 15px;
 }
 
-.song_list > div{
+.song_list>div {
     background-color: #171717;
     color: #6595E0;
     height: 100%;
@@ -161,33 +163,29 @@ article.best {
     flex-direction: column;
     padding-left: 20px;
     padding-top: 10px;
+    margin-top: 10px;
 }
 
-.song_list > h2{
-}
 
 
-.song_list > div > ul {
+.song_list>div>ul {
     margin-top: -10px;
     padding-left: 20px;
     padding-right: 20px;
-    list-style-type:decimal;
+    list-style-type: decimal;
     font-size: 14px;
 
 }
 
-.song_list div:nth-child(1){
+.song_list div:nth-child(1) {
     border-radius: 0 0 0 20px;
-    margin-right: 10px;
 }
 
-.song_list div:nth-child(2){
+.song_list div:nth-child(2) {
     border-radius: 0 0 20px 0;
-    margin-right: 10px;
-
 }
 
-h2{
+h2 {
     padding: 0;
     margin: 10px 0px;
 }
@@ -216,10 +214,10 @@ article {
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "album album album album cover cover" 
-    ". . . . song song"
-    "menu menu menu menu menu menu";
+    grid-template-areas:
+        "album album album album cover cover"
+        ". . . . song song"
+        "menu menu menu menu menu menu";
 }
 
 /* bottom groups */
@@ -230,17 +228,29 @@ article {
     grid-template-columns: repeat(6, 1fr);
     align-items: stretch;
     justify-content: stretch;
-    grid-column: 1 /  7;
+    grid-column: 1 / 7;
     gap: 5px;
+    min-height: 200px;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
-.anecdotes > li {
+.anecdotes>li {
     list-style-type: none;
     display: flex;
     flex-direction: row;
 }
 
-#are_you_experienced > ul > .top_right_90 {
+.empty {
+    display: none;
+    height: 0;
+    visibility: hidden;
+}
+
+
+
+#are_you_experienced>ul>.top_right_90 {
     background-color: #122B47;
     padding: 20px;
     border-radius: 20px 0 20px 20px;
@@ -250,7 +260,7 @@ article {
 
 }
 
-#are_you_experienced > ul > .bottom_left_90 {
+#are_you_experienced>ul>.bottom_left_90 {
     background-color: #122B47;
     padding: 20px;
     border-radius: 20px 20px 20px 0;
@@ -261,13 +271,12 @@ article {
 
 }
 
-#are_you_experienced > ul > .top_left_90 {
+#are_you_experienced>ul>.top_left_90 {
     background-image: url(media/bw.jpg);
     border-radius: 0 20px 20px 20px;
-    background-position: center;
-    background-size:auto;
+    background-size: cover;
     background-repeat: no-repeat;
-    grid-column: 5 ;
+    grid-column: 5;
     grid-row: 1;
     padding: 10px;
 
@@ -278,12 +287,12 @@ article {
 
 }
 
-#are_you_experienced > ul > .bottom_right_90 {
+#are_you_experienced>ul>.bottom_right_90 {
     background-color: #122B47;
     padding: 20px;
     border-radius: 20px 0 20px 20px;
     align-self: center;
-    grid-column: 6 ;
+    grid-column: 6;
     grid-row: 1;
     align-self: stretch;
 
@@ -296,14 +305,12 @@ article {
 
 /* article 2 bottom */
 
-/* .two_wide, .bottom_left_90{
-    grid-column: 1 / 2 ;
-} */
-#axis_bold_as_love{
-    position: relative;
-    }
 
-#axis_bold_as_love > ul > .bottom_left_90 {
+#axis_bold_as_love {
+    position: relative;
+}
+
+#axis_bold_as_love>ul>.bottom_left_90 {
     background-color: #9CBAD3;
     color: black;
     padding: 20px;
@@ -313,7 +320,7 @@ article {
     align-items: center;
 }
 
-#axis_bold_as_love > ul > li:nth-child(2)  {
+#axis_bold_as_love>ul>li:nth-child(2) {
     background-color: #9CBAD3;
     color: black;
     padding: 20px;
@@ -325,13 +332,12 @@ article {
 
 }
 
-#axis_bold_as_love > ul > li:nth-child(5) {
-    background-image: url(media/bw.jpg);
+#axis_bold_as_love>ul>li:nth-child(5) {
+    background-image: url(media/down.jpg);
+    background-size: cover;
     border-radius: 0 20px 20px 20px;
-    background-position: center;
-    background-size:auto;
     background-repeat: no-repeat;
-    grid-column: 4 / 6 ;
+    grid-column: 4 / 6;
     grid-row: 1;
     padding: 10px;
 
@@ -341,7 +347,7 @@ article {
 
 }
 
-#axis_bold_as_love > ul > li:nth-child(6)  {
+#axis_bold_as_love>ul>li:nth-child(6) {
     background-color: #9CBAD3;
     color: black;
     padding: 20px;
@@ -354,6 +360,10 @@ article {
 
 }
 
+
+#axis_bold_as_love>.anecdotes {
+    margin-bottom: -15px;
+}
 
 /* article 2 */
 
@@ -370,64 +380,152 @@ footer {
 
 /* hovers */
 
-.cover:hover .show_hover{
-
-opacity: 1;
-display: block;
+nav>div:not(:nth-child(2)):hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
 }
 
-.cover:hover .show_not_hover{
+.cover:hover .show_hover {
+
+    opacity: 1;
+    display: block;
+}
+
+.cover:hover .show_not_hover {
     display: none;
-    
-    }
+
+}
 
 
-#axis_bold_as_love::before{
+#axis_bold_as_love::before {
 
-    margin-top: -20px;
-    margin-left: -25px;
+    margin-top: -10px;
+    margin-left: -15px;
 
     background-image: url('media/number-1-icon.png');
     background-size: 50px 50px;
     position: absolute;
-    width: 50px; 
+    width: 50px;
     height: 50px;
-    content:"";
+    content: "";
     top: 0;
 
 }
 
 /* media */
 
-@media (max-width: 900px) {
-    .album_data > div > h1 {
+@media (max-width: 900px) and (min-width: 800px) {
+    .album_data>div>h1 {
         font-size: 37.7833px;
-}
+    }
 
-    .album_data > div > h2 {
+    .album_data>div>h2 {
         font-size: 16.2px;
 
-}
+    }
 
-    header > h1:first-child {
+    header>h1:first-child {
         font-size: 54px;
-}
+    }
+
+
 }
 
 
 @media (min-width: 1111px) {
-.album_data > div > h1 {
+    .album_data>div>h1 {
         font-size: 46.65px;
+    }
+
+    .album_data>div>h2 {
+        font-size: 19.9833px;
+
+    }
+
+    header>h1:first-child {
+        font-size: 66.65px;
+    }
+
+
 }
 
-.album_data > div > h2 {
-    font-size: 19.9833px;
+@media (max-width: 800px) {
+    .cover {
+        grid-column: 1 / 4;
+        margin-right: 10px;
+        border-radius: 20px 0 0 20px;
+    }
 
-}
+    .song_list {
+        grid-column: 4 / 7;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        margin-right: 20px;
+    }
 
-header > h1:first-child {
-    font-size: 66.65px;
-}
+    .song_list div:nth-child(1) {
+        border-radius: 0 20px 0 0;
+        justify-content: center;
+
+    }
+
+    .song_list div:nth-child(2) {
+        border-radius: 0 0 20px 0;
+        justify-content: center;
+    }
+
+    .album_data {
+        margin-top: 20px;
+        grid-area: auto;
+        grid-column: 1 / 7;
+        grid-row: 2;
+    }
 
 
+    .album_data>div>h1 {
+        font-size: 50px;
+    }
+
+    .album_data>div>h2 {
+        font-size: 24px;
+
+    }
+
+    header>h1:first-child {
+        font-size: 64px;
+        text-align: center;
+    }
+
+    .show_not_hover {
+        border-radius: 20px 0 0 20px;
+    
+    }
+    
+    .show_hover {
+        border-radius: 20px 0 0 20px;
+
+    }
+
+    #are_you_experienced > ul > .top_right_90{
+        grid-row: 1 / 1;
+    }
+
+    #are_you_experienced > ul > .top_left_90 {
+        grid-row: 2;
+        grid-column: 2 / 4;
+        color: white;
+    }
+
+    #are_you_experienced > ul > .bottom_left_90{
+        grid-column: 4 / 7;
+        grid-row: 1;
+    }
+
+    #are_you_experienced > ul > .bottom_right_90{
+        grid-row: 2;
+        grid-column: 4 / 5;
+    }
 }
